@@ -1,0 +1,56 @@
+$black: #000;
+$blue:  #00aeef;
+$grey: rgb(99, 96, 96);
+$white: #fff;
+
+.bg-light {
+  background-color: transparent !important;
+}
+
+.navbar-brand {
+  padding-top: 20px;
+}
+
+.nav-item {
+  margin-left: 60px;
+  padding: 20px;
+  li {
+	  height:150px;
+    color: $white;
+    display: block;
+    line-height: 240px;
+    padding: 0 15px;
+    text-decoration: none;
+  }
+  a{
+    -moz-transition-duration: 0.20s;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-duration: 0.20s;
+    -o-transition-timing-function: ease-out;
+    -webkit-transition-duration: 0.20s;
+    -webkit-transition-timing-function: ease-out;
+    color: $grey;
+    height:150px;
+    padding: 12px;
+  }
+  :hover {
+    background-color:$blue;
+    color: $white;
+    height:150px;
+    padding: 12px;
+    text-decoration: none;
+  }
+}
+
+.mr-sm-2 {
+  border-radius: 15px;
+  border: 2px solid transparent;
+  margin-right: 0;
+  padding: 5px;
+}
+
+.my-sm-0 {
+  background-color: $blue;
+  border: 1px solid transparent;
+  color: $white;
+}

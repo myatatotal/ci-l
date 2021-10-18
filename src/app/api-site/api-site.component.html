@@ -1,0 +1,66 @@
+
+<section class="container">
+  <app-navbar></app-navbar>
+  <app-content></app-content>
+    <div *ngFor="let valor of dados$">
+      <ngb-accordion #a="ngbAccordion" activeIds="custom-panel-1">
+        <ngb-panel id="custom-panel-1">
+          <ng-template ngbPanelHeader let-opened="opened">
+            <div class="d-flex align-items-center justify-content-between">
+              <button ngbPanelToggle class="btn btn-link container-fluid text-left pl-0">Datas, Descricão e Valor</button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <h5>Data Efetiva Lançamento: {{valor.dataEfetivaLancamento}}</h5>
+            <h5>Descrição do Pagamento: {{valor.descricaoGrupoPagamento}}</h5>
+            <h5>Valor: {{valor.valorLancamentoRemessa}}</h5>
+          </ng-template>
+        </ngb-panel>
+
+        <ngb-panel>
+          <ng-template ngbPanelHeader>
+            <div class="d-flex align-items-center justify-content-between">
+              <button ngbPanelToggle class="btn btn-link container-fluid text-left pl-0">Situação</button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p class="text-muted">nome Situacao Remessa: {{valor.lancamentoContaCorrenteCliente.nomeSituacaoRemessa}}</p>
+            <p class="text-muted">nome Tipo Operacao: {{valor.lancamentoContaCorrenteCliente.nomeTipoOperacao}}</p>
+            <p class="text-muted">numero Remessa Banco: {{valor.lancamentoContaCorrenteCliente.numeroRemessaBanco}}</p>
+          </ng-template>
+        </ngb-panel>
+
+        <ngb-panel [disabled]="disabled" [cardClass]="disabled ? 'disabled' : ''">
+          <ng-template ngbPanelHeader>
+            <div class="d-flex align-items-center justify-content-between">
+              <button ngbPanelToggle class="btn btn-link container-fluid text-left pl-0">Dados bancários</button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <p class="text-muted">codigo Banco: {{valor.lancamentoContaCorrenteCliente.dadosDomicilioBancario.codigoBanco}}</p>
+            <p class="text-muted">numero Agencia: {{valor.lancamentoContaCorrenteCliente.dadosDomicilioBancario.numeroAgencia}}</p>
+            <p class="text-muted">numero Conta Corrente: {{valor.lancamentoContaCorrenteCliente.dadosDomicilioBancario.numeroContaCorrente}}</p>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel [disabled]="disabled" [cardClass]="disabled ? 'disabled' : ''">
+          <ng-template ngbPanelHeader>
+            <div class="d-flex align-items-center justify-content-between">
+              <button ngbPanelToggle class="btn btn-link container-fluid text-left pl-0">Gráficos</button>
+            </div>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            <canvas baseChart
+            [datasets]="barChartData"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+          </canvas>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+<app-footer></app-footer>
+</section>
+
+
+
