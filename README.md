@@ -1,4 +1,8 @@
-# TestCieloGft
+# TestCieloStefanini
+
+em Server esta a API, utilizar json-server para rodar - npm install -g json-server // json-server --watch lancamento-conta-legado.json;
+
+npm install e ng serve para rodar a aplicação.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 
