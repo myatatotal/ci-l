@@ -11,7 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChartsModule } from 'ng2-charts';
 import { CieloComponent } from './cielo/cielo.component';
 import { ApiSiteComponent } from './api-site/api-site.component';
-import { ChartSiteComponent } from './chart-site/chart-site.component';
+import { ContatoComponent } from './contato/contato.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContentComponent } from './components/content/content.component';
@@ -21,7 +21,7 @@ import { ContentComponent } from './components/content/content.component';
     AppComponent,
     CieloComponent,
     ApiSiteComponent,
-    ChartSiteComponent,
+    ContatoComponent,
     NavbarComponent,
     FooterComponent,
     ContentComponent,
