@@ -1,4 +1,4 @@
-# TestCieloStefanini
+# Cielo
 
 em Server esta a API, utilizar json-server para rodar - npm install -g json-server // json-server --watch lancamento-conta-legado.json;
 
